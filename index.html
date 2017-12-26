@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <title>Merry Christmas!</title>
+</head>
+
+<body>
+    <h3>You can edit page styles by yourself</h3>
+    <style id="main-styles" contenteditable="true">
+        body {
+            font-family: monospace;
+            max-width: 800px;
+            margin: 10px auto;
+        }
+
+        .tree--output__item {
+            white-space: pre;
+        }
+
+        .tree-sourse__input--item {
+            display: block;
+            margin: 4px 0;
+            font-size: 14px;
+        }
+
+        #main-styles {
+            display: block;
+            white-space: pre;
+            border: 1px dashed gray;
+        }
+    </style>
+
+    <h3>Christmas tree building rules:</h3>
+    <p>
+        Enter a char sequence that will be the source to our Christmas tree. Here is the example. The tree is building from char
+        sequence and the tree stalk length is third of source char length.
+    </p>
+    <p>
+        Sourse
+        <span id="tree-sourse__input--example"></span>
+    </p>
+    <pre id="tree-sourse__output--example" class="tree--output__item"></pre>
+    <form id="tree-sourse__form">
+        <input type="text" id="tree-sourse__input" class="tree-sourse__input--item">
+        <input type="submit" class="tree-sourse__input--item" value="Build our own tree">
+    </form>
+    <pre id="tree-sourse__output" class="tree--output__item"></pre>
+    <script src="chr-tree.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

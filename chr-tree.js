@@ -23,7 +23,7 @@ const ChristmasTree = (function () {
      */
     function buildLevel(depth, length, source) {
         const spaceCount = length - depth;
-        const spaces = Array(spaceCount).fill(' ').join('');
+        const spaces = ' '.repeat(spaceCount);
         let symbols = '';
 
         for (let i = 0; i < length - spaceCount; i++) {
@@ -44,9 +44,10 @@ const ChristmasTree = (function () {
     }
 
     function buildStalk(treeDepth) {
-        const spaces = Array(Math.floor(treeDepth / 2)).fill(' ').join('');
+        const spaces = ' '.repeat(Math.floor(treeDepth / 2));
         const stalkLength = Math.ceil(treeDepth / 3);
-        return (Array(stalkLength).fill(spaces + '|').join('\n'));
+
+        return `${spaces}|\n`.repeat(stalkLength);
     }
 
     return {
